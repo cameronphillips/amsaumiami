@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Styles.Render("~/Content/modified-elements")
+    @Styles.Render("~/Content/bootstrap-theme")
+    @Scripts.Render("~/bundles/modernizr")
+
+</head>
+<body style="background-color: #D8DBE1">
+    <header>
+        <nav id="myNavbar" role="navigation" class="navbar navbar-default navbar-fixed-top">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="container-fluid">
+                <div class="navbar-header" style="color:#ffffff">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbarCollapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <ul class="nav navbar-nav" style="color:#ffffff">
+                        <li>@Html.ActionLink("Home", "index", "Home")</li>
+                        <li>@Html.ActionLink("About", "about", "Home")</li>
+                        <li>@Html.ActionLink("Join", "join", "Home")</li>
+                        @*<li>@Html.ActionLink("Members", "index", "Members")</li>*@ 
+                        <li>@Html.ActionLink("Officers", "officers", "Home")</li>
+                        <!--  <li><a href="" target="_self">Calendar</a></li> TODO: ADD PAGE -->
+                        @*<li>@Html.ActionLink("Sign ups", "Create", "Signups")</li>*@
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Informational<b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li>@Html.ActionLink("Leadership Opportunities", "leadershipopportunities", "Home")</li>
+                                <li>@Html.ActionLink("Volunteer Opportunities", "volunteeropportunities", "Home")</li>
+                                <li>@Html.ActionLink("Physician Shadowing", "physicianshadowing", "Home")</li>
+                                <li>@Html.ActionLink("Research", "research", "Home")</li>
+                                <li>@Html.ActionLink("MCAT", "mcat", "Home")</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <p class="navbar-text navbar-right">Next Meeting: <strong>8:00pm November 5, 2014 - UC 211</strong></p>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+        @RenderBody()
+
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/knockout")
+    @Scripts.Render("~/bundles/app")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

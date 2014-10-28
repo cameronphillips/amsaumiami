@@ -1,0 +1,98 @@
+﻿@model memberDatabasetest.Models.Signup
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Signup</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SchoolYear)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SchoolYear)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PhoneNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PhoneNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Major)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Major)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Specialty)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Specialty)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HasCar)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HasCar)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Availability)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Availability)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BrowardAvailable)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BrowardAvailable)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VolunteerActivity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VolunteerActivity)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,145 @@
+﻿@model memberDatabasetest.Models.Signup
+
+@{
+    ViewBag.Title = "Signups";
+}
+
+<div class='jumbotron' style="background-color: #66CCFF">
+    <h1>Physician Shadowing Application</h1>
+</div>
+<div class='container-fluid' style='margin-bottom: 15px; width: inherit; height: inherit; text-align: center'>
+
+    <div class='row' style='margin-bottom: 15px'>
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+            <div class='col-xs-6 col-xs-3' style='width: inherit; height: inherit'>
+
+
+                <fieldset style="width: inherit; height: inherit">
+                    <div class="form-horizontal" style="width: inherit; height: inherit">
+                        <hr />
+                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                        <div class="form-group" style="width: inherit; height: inherit">
+                            @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10" style="width: inherit; height: inherit">
+                                @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group" style="width: inherit; height: inherit">
+                            @Html.LabelFor(model => model.SchoolYear, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10" style="width: inherit; height: inherit">
+                                @Html.DropDownList("SchoolYear")
+                                @Html.ValidationMessageFor(model => model.SchoolYear)
+
+                                @*<form action="Signups/Create">
+                                        <select id="SchoolYear" name="SchoolYear">
+                                            <option value="0" selected ="selected">Freshman</option>
+                                            <option value="1">Sophomore</option>
+                                            <option value="2">Junior</option>
+                                            <option value="3">Senior</option>
+                                        </select>
+                                    </form>*@
+
+
+
+                                @*@Html.EditorFor(model => model.SchoolYear, "", new SelectList(new string[] { "Freshman", "Sophomore", "Junior", "Senior" }))*@
+
+                                @*@Html.EditorFor(model => model.SchoolYear, new { htmlAttributes = new { @class = "form-control" } })
+                                    @Html.ValidationMessageFor(model => model.SchoolYear, "", new { @class = "text-danger" })*@
+                            </div>
+                        </div>
+
+                        <div class="form-group" style="width: inherit; height: inherit">
+                            @Html.LabelFor(model => model.PhoneNumber, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10" style="width: inherit; height: inherit">
+                                @Html.EditorFor(model => model.PhoneNumber, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.PhoneNumber, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group" style="width: inherit; height: inherit">
+                            @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10" style="width: inherit; height: inherit">
+                                @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group" style="width: inherit; height: inherit">
+                            @Html.LabelFor(model => model.Major, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10" style="width: inherit; height: inherit">
+                                @Html.EditorFor(model => model.Major, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.Major, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group" style="width: inherit; height: inherit">
+                            @Html.LabelFor(model => model.Specialty, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10" style="width: inherit; height: inherit">
+
+                                @*@Html.EditorFor(model => model.Specialty, new { htmlAttributes = new { @class = "form-control" } })*@
+
+                                @Html.ListBox("Specialty", ViewBag.SpecialtiesList as MultiSelectList)
+                                @Html.ValidationMessageFor(model => model.Specialty, "", new { @class = "text-danger" })
+
+
+                                @*@Html.EditorFor(model => model.Specialty, new { htmlAttributes = new { @class = "form-control" } })*@
+                            </div>
+                        </div>
+
+                        <div class="form-group" style="width: inherit; height: inherit">
+                            @Html.LabelFor(model => model.HasCar, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10" style="width: inherit; height: inherit">
+                                <div class="checkbox" style="width: inherit; height: inherit">
+                                    @Html.EditorFor(model => model.HasCar)
+                                    @Html.ValidationMessageFor(model => model.HasCar, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group" style="width: inherit; height: inherit">
+                            @Html.LabelFor(model => model.Availability, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10" style="width: inherit; height: inherit">
+                                @Html.ListBox("Availability", ViewBag.AvailabilitiesList as MultiSelectList)
+                                @Html.ValidationMessageFor(model => model.Availability, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group" style="width: inherit; height: inherit">
+                            @Html.LabelFor(model => model.BrowardAvailable, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10" style="width: inherit; height: inherit">
+                                <div class="checkbox" style="width: inherit; height: inherit">
+                                    @Html.EditorFor(model => model.BrowardAvailable)
+                                    @Html.ValidationMessageFor(model => model.BrowardAvailable, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group" style="width: inherit; height: inherit">
+                            @Html.LabelFor(model => model.VolunteerActivity, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10" style="width: inherit; height: inherit">
+                                @Html.ListBox("VolunteerActivity", ViewBag.VolunteerActivitiesList as MultiSelectList)
+                                @Html.ValidationMessageFor(model => model.VolunteerActivity, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group" style="width: inherit; height: inherit">
+                            <div class="col-md-offset-2 col-md-10" style="width: inherit; height: inherit">
+                                <input type="submit" value="Create" class="btn btn-default" />
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+        }
+    </div>
+
+</div>
+
+
+    @section Scripts {
+        @Scripts.Render("~/bundles/jqueryval")
+    }

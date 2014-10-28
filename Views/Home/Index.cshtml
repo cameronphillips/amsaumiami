@@ -1,0 +1,54 @@
+﻿@{
+    ViewBag.Title = "American Medical Student Association - University of Miami";
+    Layout = "~/Views/Shared/_LayoutAMSA.cshtml";
+}
+
+<div class='jumbotron' style="background-color: #66CCFF">
+    <div class='page-header'>
+        <h1 style="color: #ffffff">American Medical Student Assocation</h1>
+        <h1><small style="color:#FF6600">University of Miami</small></h1>
+    </div>
+    <p class='lead'>It takes more than medical school to make a physician.</p>
+</div>
+
+
+
+<div class='container-fluid'>
+    <div class='row' style='padding-top: 15px'>
+        <div class='col-xs-5 col-xs-offset-1'>
+            <blockquote class="blockquote-reverse">
+                <p>American Medical Student Association at the University of Miami is dedicated to giving students an opportunity to learn about medical issues, expand their leadership qualities, participate in meaningful volunteer work and get real hands on medical training. All of which will help enhance the medical school application and in the process build well rounded students on campus.</p>
+            </blockquote>
+        </div>
+        <div class='col-xs-6'>
+            <div class='text-center'><img src='http://amsaofumiami.webs.com/UM.gif' class="img-responsive" /> </div>
+        </div>
+    </div>
+    <div class='row'>
+        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" style='background-color:#D8DBE1 '>
+            <ol class="carousel-indicators">
+                <li data-target="#carousel-example-generic" data-slide-to="0" class=""></li>
+                <li class="active" data-target="#carousel-example-generic" data-slide-to="1"></li>
+                <li class="" data-target="#carousel-example-generic" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="item">
+                    <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI5MDAiIGhlaWdodD0iNTAwIj48cmVjdCB3aWR0aD0iOTAwIiBoZWlnaHQ9IjUwMCIgZmlsbD0iIzc3NyIvPjx0ZXh0IHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9IjQ1MCIgeT0iMjUwIiBzdHlsZT0iZmlsbDojNTU1O2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1zaXplOjU2cHg7Zm9udC1mYW1pbHk6QXJpYWwsSGVsdmV0aWNhLHNhbnMtc2VyaWY7ZG9taW5hbnQtYmFzZWxpbmU6Y2VudHJhbCI+Rmlyc3Qgc2xpZGU8L3RleHQ+PC9zdmc+" data-src="holder.js/900x500/auto/#777:#555/text:First slide" alt="First slide">
+                </div>
+                <div class="item active">
+                    <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI5MDAiIGhlaWdodD0iNTAwIj48cmVjdCB3aWR0aD0iOTAwIiBoZWlnaHQ9IjUwMCIgZmlsbD0iIzY2NiIvPjx0ZXh0IHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9IjQ1MCIgeT0iMjUwIiBzdHlsZT0iZmlsbDojNDQ0O2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1zaXplOjU2cHg7Zm9udC1mYW1pbHk6QXJpYWwsSGVsdmV0aWNhLHNhbnMtc2VyaWY7ZG9taW5hbnQtYmFzZWxpbmU6Y2VudHJhbCI+U2Vjb25kIHNsaWRlPC90ZXh0Pjwvc3ZnPg==" data-src="holder.js/900x500/auto/#666:#444/text:Second slide" alt="Second slide">
+                </div>
+                <div class="item">
+                    <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI5MDAiIGhlaWdodD0iNTAwIj48cmVjdCB3aWR0aD0iOTAwIiBoZWlnaHQ9IjUwMCIgZmlsbD0iIzU1NSIvPjx0ZXh0IHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9IjQ1MCIgeT0iMjUwIiBzdHlsZT0iZmlsbDojMzMzO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1zaXplOjU2cHg7Zm9udC1mYW1pbHk6QXJpYWwsSGVsdmV0aWNhLHNhbnMtc2VyaWY7ZG9taW5hbnQtYmFzZWxpbmU6Y2VudHJhbCI+VGhpcmQgc2xpZGU8L3RleHQ+PC9zdmc+" data-src="holder.js/900x500/auto/#555:#333/text:Third slide" alt="Third slide">
+                </div>
+            </div>
+            <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+            </a>
+            <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+            </a>
+        </div>
+    </div>
+    @RenderPage("footer.cshtml")
+</div>

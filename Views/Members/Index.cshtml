@@ -1,0 +1,68 @@
+﻿@model IEnumerable<memberDatabasetest.Models.Member>
+
+@{
+    ViewBag.Title = "Members";
+    Layout = "~/Views/Shared/_LayoutAMSA.cshtml";
+}
+
+
+
+
+
+<div class='jumbotron' style="background-color: #66CCFF">
+    <div class='page header'>
+        <h1 style="color: #ffffff">Members</h1>
+    </div>
+</div>
+
+<div class="container-fluid">
+    @using (Html.BeginForm())
+    {
+        <div class='row' style='padding-top: 15px'>
+            <div class="col-xs-6 col-xs-offset-3">
+                Name: @Html.TextBox("SearchString") <br />
+                <input type="submit" value="Search"  />
+            </div>
+        </div>
+    }
+
+    <div class="row">
+        <div class="col-xs-6 col-xs-offset-3">
+            <table class="table">
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.name)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.yearsPaid)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.points)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.inactive)
+                    </th>
+                    <th></th>
+                </tr>
+
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.name)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.yearsPaid)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.points)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.inactive)
+                        </td>
+                    </tr>
+                }
+            </table>
+        </div>
+    </div>
+</div>

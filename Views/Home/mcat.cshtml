@@ -1,0 +1,62 @@
+﻿@{
+    ViewBag.Title = "MCAT Preparation";
+    Layout = "~/Views/Shared/_LayoutAMSA.cshtml";
+}
+
+<div class='jumbotron' style="background-color: #66CCFF">
+    <div class='page header'>
+        <h1 style="color: #ffffff">MCAT</h1>
+        <p class='lead'>Medical College Admissions Test</p>
+    </div>
+</div>
+
+<div class='container fluid'>
+    <div class='row'>
+        <div class='panel panel-default'>
+            <div class='panel-body'>
+                <p class='lead'>
+                    The MCAT (Medical College Admissions Test) is the nationwide test required by medical schools during their admission process.
+
+                    There are always different ways to approach a test, from study books to classes to practice exams, overall different methods work for different people. Here are some resources to consider when venturing into the MCAT preparation.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class='row'>
+        <div class='panel panel-default'>
+            <div class='panel-body'>
+                <div class='col-xs-1'>
+                    <a href="http://www.aamc.org">
+                        <button type="button" class="btn btn-default btn-lg" style='background-color: #D8DBE1' data-toggle="tooltip" data-placement="top" title="www.aamc.org">
+                            <span class="glyphicon glyphicon-link"></span>
+                        </button>
+                    </a>
+                </div>
+                <div class='col-xs-4'>
+                    <p class='lead'><small>Official MCAT Site</small></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class='row'>
+        <div class='panel panel-default'>
+            <div class='panel-body'>
+                <div class='col-xs-1'>
+                    <a href="http://www.studentdoctor.net">
+                        <button type="button" class="btn btn-default btn-lg" style='background-color: #D8DBE1'>
+                            <span class="glyphicon glyphicon-link"></span>
+                        </button>
+                    </a>
+                </div>
+                <div class='col-xs-6'>
+                    <p class='lead'><small>Student Doctor Network</small></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@RenderPage("footer.cshtml")
+
+

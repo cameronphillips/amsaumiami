@@ -1,0 +1,136 @@
+﻿@model IEnumerable<memberDatabasetest.Models.Signup>
+
+@{
+    ViewBag.Title = "Physician Shadowing Applicants";
+    Layout = "~/Views/Shared/_LayoutAMSA.cshtml";
+
+}
+
+<div class="jumbotron" style="background-color: #66CCFF">
+    <h1 style="color: #ffffff">Physician Shadowing Applicants</h1>
+</div class="jumbotron">
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-xs-6">
+            <table class="table">
+                <tr style ="text-align: center">
+                    <th>
+                        @Html.DisplayNameFor(model => model.Name)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.SchoolYear)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.PhoneNumber)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Email)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Major)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Specialty)
+                        <ol>
+                            <li>Dermatology</li>
+                            <li>Cardiology</li>
+                            <li>Endocrinology</li>
+                            <li>General Surgery</li>
+                            <li>Internal Medicine</li>
+                            <li>Nephrology</li>
+                            <li>Ophthalmology</li>
+                            <li>Orthopedic Surgery</li>
+                            <li>Otolaryngology</li>
+                            <li>Pediatric Otolaryngology</li>
+                            <li>Pediatric Surgery</li>
+                            <li>Pediatrics</li>
+                            <li>Plastic Surgery</li>
+                            <li>Dermatology</li>
+                            <li>Rheumatology</li>
+                            <li>Thoracic & Cardiac Surgery</li>
+                        </ol>
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.HasCar)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Availability)
+                        <ol>
+                            <li>Monday morning</li>
+                            <li>Monday afternoon</li>
+                            <li>Tuesday morning</li>
+                            <li>Tuesday afternoon</li>
+                            <li>Wednesday morning</li>
+                            <li>Wednesday afternoon</li>
+                            <li>Thursday morning</li>
+                            <li>Thursday afternoon</li>
+                            <li>Friday morning</li>
+                            <li>Friday afternoon</li>
+                            <li>Weekends (Not normally available)</li>
+                        </ol>
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.BrowardAvailable)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.VolunteerActivity)
+                        <ol>
+                            <li>Big Brothers Big Sisters</li>
+                            <li>Camillus House</li>
+                            <li>Camp Boggy Creek</li>
+                            <li>Food Pantry and Clothing/Food Drives</li>
+                            <li>Fun Day</li>
+                            <li>Habitat for Humanity</li>
+                            <li>High School Pre-Med Mentorship</li>
+                            <li>National Gandhi Day of Service</li>
+                            <li>Relay for Life</li>
+                        </ol>
+                    </th>
+                    <th></th>
+                </tr>
+
+                @foreach (var item in Model)
+                {
+                    <tr style="text-align: center">
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Name)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.SchoolYear)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.PhoneNumber)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Email)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Major)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Specialty)
+
+
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.HasCar)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Availability)
+
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.BrowardAvailable)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.VolunteerActivity)
+
+                        </td>
+                        <td></td>
+                    </tr>
+                }
+
+            </table>
+        </div>
+    </div class="row">
+</div class="container-fluid">
